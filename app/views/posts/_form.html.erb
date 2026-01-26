@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-body">
+    <%= form_with(model: post, local: true) do |form| %>
+      <% if post.errors.any? %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <h5 class="alert-heading"><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved</h5>
+          <ul class="mb-0">
+            <% post.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% end %>
+
+      <div class="mb-3">
+        <%= form.label :title, class: 'form-label' %>
+        <%= form.text_field :title, class: 'form-control', placeholder: 'Enter post title' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :header_image, "Thumbnail (Image only)", class: 'form-label' %>
+        <%= form.file_field :header_image, accept: 'image/*', class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :body, class: 'form-label' %>
+        <%= form.text_area :body, rows: 8, class: 'form-control', placeholder: 'Write your post content here...' %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :files, "Resources (PDFs, Docs, etc.)", class: 'form-label' %>
+        <%= form.file_field :files, multiple: true, class: 'form-control' %>
+      </div>
+
+      <div class="d-flex gap-2">
+        <%= form.submit class: 'btn btn-primary' %>
+        <%= link_to "Cancel", posts_path, class: 'btn btn-outline-secondary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

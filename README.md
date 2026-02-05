@@ -63,6 +63,3 @@ Grafana: http://localhost:3001
 Stop everything:
 docker compose down
 
-Final Note
-This project helped me understand the basics of Docker, Docker Compose, reverse proxies, and CI/CD.
-I learned a lot by debugging errors and fixing them step by step.

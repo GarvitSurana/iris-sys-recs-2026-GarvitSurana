@@ -7,7 +7,7 @@ ruby "3.4.1"
 gem "rails", "~> 7.0.10"
 
 
-gem 'activesupport', '~> 8.1', '>= 8.1.2'
+#gem 'activesupport', '~> 8.1', '>= 8.1.2'
 
 gem 'activerecord', '~> 8.1', '>= 8.1.2'
 

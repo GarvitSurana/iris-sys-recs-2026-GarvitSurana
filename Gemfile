@@ -9,7 +9,7 @@ gem "rails", "~> 7.0.10"
 
 #gem 'activesupport', '~> 8.1', '>= 8.1.2'
 
-gem 'activerecord', '~> 8.1', '>= 8.1.2'
+#gem 'activerecord', '~> 8.1', '>= 8.1.2'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

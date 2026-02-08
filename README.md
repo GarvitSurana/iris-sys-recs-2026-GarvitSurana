@@ -50,6 +50,10 @@ Added a GitHub Actions workflow
 Automatically builds the Docker image on every push to main
 Pushes the image to Docker Hub using secrets
 
+I added a simple shell script to back up the database and important project files.
+The script uses mysqldump for database backup and stores all backups in the backups/ folder.
+On windows, the script was tested using Git Bash.
+
 
 How to Run
 docker compose up --build --scale app=3

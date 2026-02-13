@@ -54,6 +54,10 @@ I added a simple shell script to back up the database and important project file
 The script uses mysqldump for database backup and stores all backups in the backups/ folder.
 On windows, the script was tested using Git Bash.
 
+Challenges i faced - 
+1.Git merge conflicts while moving repositories – When shifting my work to the new IRIS repository(originally i did some work in github classroom repo), I faced merge conflicts. I carefully resolved conflicts in the Gemfile and README.md and completed the merge properly.
+2.Dependency version conflicts (Rails & ActiveSupport) – The Docker build failed due to wrong gem versions. I searched up about it and i commented out the active support and activerecord version as removing those explicit versions allowed Bundler to resolve dependencies correctly.
+
 
 How to Run
 docker compose up --build --scale app=3
